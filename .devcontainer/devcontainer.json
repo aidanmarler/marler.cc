@@ -1,0 +1,25 @@
+{
+	"name": "Svelte + 🥟",
+	"image": "ghcr.io/nhaef/devcontainer-bun:latest",
+	"features": {
+		"ghcr.io/devcontainers-extra/features/typescript:2": {}
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"svelte.svelte-vscode",
+				"bradlc.vscode-tailwindcss",
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint"
+			]
+		}
+	},
+	"forwardPorts": [5173],
+	"portsAttributes": {
+		"5173": {
+			"label": "Svelte Dev Server"
+		}
+	},
+	"postCreateCommand": "bun install"
+}
